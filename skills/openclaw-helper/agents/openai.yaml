@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenClaw Helper"
+  short_description: "Use live OpenClaw docs and CLI knowledge"
+  default_prompt: "Use $openclaw-helper to answer my OpenClaw setup, CLI, or troubleshooting question."

@@ -1,0 +1,34 @@
+name: Refresh OpenClaw knowledge base
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh knowledge files
+        run: python -m openclaw_helper_agent.crawler refresh
+      - name: Show changes
+        run: git status --short
+      - name: Open refresh pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: codex/refresh-openclaw-knowledge
+          title: Refresh OpenClaw helper knowledge base
+          commit-message: Refresh OpenClaw helper knowledge base
+          body: |
+            Automated refresh from the live OpenClaw docs index.
+
+            This updates the crawled docs pages, extracted CLI command inventory,
+            and crawl report used by the helper agent knowledge base.

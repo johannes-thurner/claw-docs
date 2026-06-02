@@ -1,12 +1,12 @@
 {
   "changed": true,
-  "command_count": 2971,
+  "command_count": 4353,
   "errors": [],
   "hashes": {
-    "commands.json": "97461a42d87e7e7a154a3778084a4da0507471caa6a86e69e98388a963923cb7",
-    "pages.json": "784d3fc8a455454c9fab0fa27c36be9f7f0fe91bd8c92d8f20c05d69081a1aca"
+    "commands.json": "394cc5ed70705ea66d51134fccb238b947e88a5474ac131e1dea3e34d447ab03",
+    "pages.json": "7b9f35ab211b5ab7cbb3908ec21b6a6c32787d1006418ce71cb187a8b01cd193"
   },
   "index_url": "https://docs.openclaw.ai/llms.txt",
-  "page_count": 467,
-  "started_at": 1777923118
+  "page_count": 686,
+  "started_at": 1780391891
 }
